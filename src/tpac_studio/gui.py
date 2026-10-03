@@ -34,6 +34,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
+from . import __version__
 from .service import Studio
 from .viewport import Viewport
 
@@ -84,7 +85,7 @@ class Window(QMainWindow):
         self.dirty = False
         self.project = ""
         self.current = None
-        self.setWindowTitle("TPAC Studio • open-source preview")
+        self.setWindowTitle(f"TPAC Studio {__version__}")
         self.resize(1440, 900)
         self.toolbar = self.addToolBar("Workspace")
         self.toolbar.setMovable(False)
@@ -225,7 +226,7 @@ class Window(QMainWindow):
         right.addWidget(screenshot)
         right.addStretch()
         limitations = QLabel(
-            "Animation decoding/authoring is held pending provenance resolution. Opaque animation repackaging remains available."
+            "Animation records can be repackaged unchanged. Animation playback, rigging and authoring are not supported."
         )
         limitations.setWordWrap(True)
         right.addWidget(limitations)

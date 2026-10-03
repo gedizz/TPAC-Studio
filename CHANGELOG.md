@@ -1,12 +1,15 @@
 # Changelog
 
-## 0.2.0 — source release candidate, 2026-10-02
+## 1.0.0 — 2026-10-03
 
-- Separate source project with MIT attribution and explicit provenance exclusions.
-- Shared revisioned workspace and service behind desktop, Python, JSON CLI and stdio MCP.
-- Protected source inputs, explicit conflicts, exact build-plan matching and output fingerprint verification.
-- Self-contained project saves with concurrent-save detection and session undo.
-- Supported texture/static-mesh/particle workflows and original procedural examples.
-- Opt-in extension contract, schemas, tests, documentation and source packaging tools.
+Initial release.
 
-This begins the open-source candidate's version line. It is not an in-place upgrade of the private 1.1 prototype. Animation decoding/authoring and game-derived preview assets are excluded pending provenance resolution. See the feature matrix for other limits.
+- Desktop package explorer with texture, static-model and particle previews.
+- Merge, select and remove workspace records with explicit conflict handling and session undo.
+- Self-contained workspace saves and concurrent-save detection.
+- Reviewed build plans, original-source protection and output fingerprint verification.
+- Supported texture import, static geometry import and particle settings edits.
+- Python API, JSON CLI, stdio MCP and opt-in extension providers.
+- Original procedural examples, schemas, tests and developer documentation.
+
+See [supported formats](docs/formats.md) for feature coverage and limitations.

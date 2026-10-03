@@ -1,7 +1,7 @@
 """Texture import/preview using layouts documented by MIT-licensed TpacTool.
 
 Only direct pixels are decoded; external streamed texture tiles remain unsupported.
-See docs/provenance.md for the exact upstream revision and attribution.
+See docs/format-references.md for the exact upstream revision and attribution.
 """
 
 import io

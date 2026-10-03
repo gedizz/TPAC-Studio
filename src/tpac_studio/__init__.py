@@ -1,6 +1,6 @@
 """TPAC Studio public Python interface. Importing this package opens no GUI."""
 
-__version__ = "0.2.0"
+__version__ = "1.0.0"
 
 from .errors import StudioError
 

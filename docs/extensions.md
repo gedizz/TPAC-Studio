@@ -49,4 +49,4 @@ finally:
 
 The service validates the provider schema before editing and applies the normal revision/identity checks. `extension_inspect` and `extension_schema` discover enabled capabilities. The generic desktop does not automatically create extension panels; use Python, CLI or MCP until such a frontend is implemented.
 
-Providers can perform arbitrary I/O in Python. The service root is not an extension sandbox. Audit provenance, dependencies and behavior before installation. License declarations are metadata, not proof that a provider is cleared for redistribution.
+Providers can perform arbitrary I/O in Python. The service root is not an extension sandbox. Review provider code, dependencies and licenses before installation.

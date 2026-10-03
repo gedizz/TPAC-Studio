@@ -1,5 +1,5 @@
 {
-  "version": "0.2.0",
+  "version": "1.0.0",
   "date": "2026-10-03",
   "scope": "Canonical Git source files with LF text; inventory excludes itself and generated local verification files",
   "files": [
@@ -20,18 +20,18 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 1970,
-      "sha256": "4a294333c72eac87070fe6e304d8fe024703271cf16e795d3e0437a576780836"
+      "bytes": 1767,
+      "sha256": "41d83a77fc85ce3b71905131a051888fc344e7c34a62d96bf7c16f34f87c7bc6"
     },
     {
       "path": "CHANGELOG.md",
-      "bytes": 860,
-      "sha256": "0fc30af6b1ccb52d122240424e16a3cd3c027b13389dfbbcad43e6cf5374f275"
+      "bytes": 682,
+      "sha256": "4c6814d421f1d12a88ff1ef508a1e7ac7cc393c535f190fdd8ae266c00114d93"
     },
     {
       "path": "CONTRIBUTING.md",
-      "bytes": 1484,
-      "sha256": "58e52d511ff667b548b33eb75221b5e31ca2bd521cc6d3fc13b9df2a7bf1859f"
+      "bytes": 1267,
+      "sha256": "73d7133f694fc0d6bee84b33857f8df7542bf2b389651eff1971219f626a468c"
     },
     {
       "path": "LICENSE",
@@ -55,28 +55,28 @@
     },
     {
       "path": "NOTICE",
-      "bytes": 584,
-      "sha256": "6e81968fead903ae213e3d795e68b6501f2367f8896e28241886f200c787c0b8"
+      "bytes": 574,
+      "sha256": "9f705cad78a44fa6e970c3a5df22f1864df350f0c9fc0068ab2e70f79f0f9bc5"
     },
     {
       "path": "README.md",
-      "bytes": 6008,
-      "sha256": "851f5816c440c24f6f5d01d8807aedfe1886593f890b39ca02ce64e76c4304c7"
+      "bytes": 5341,
+      "sha256": "36daa137eed296fc47de5fbd156745066d62f90d64839ef316e1a5c359200e43"
     },
     {
       "path": "SECURITY.md",
-      "bytes": 1535,
-      "sha256": "d8489f5c546a1ccb323bc5c63a11660f894a33d7b80e2cb36ec101c6f1e010e3"
+      "bytes": 1278,
+      "sha256": "d4b0ae931133e652a072825ce9f11d6ce1076c599651cf3607edf2e8ee06e920"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "bytes": 2978,
-      "sha256": "ba46bd5bdb8f1fa885919f40b3137f6a73692fbf4425b7d9ca3928b61dfa9b62"
+      "bytes": 2858,
+      "sha256": "ac566ddc709ed7b2fd3821eaddcf08df4bcd15b4c3e10bb17bba46ab9c9f3026"
     },
     {
       "path": "docs/ai.md",
-      "bytes": 4233,
-      "sha256": "713ab79b5a3342a70b6668340ab97fe2d0393633ff0a43032b2c067ee9b0a3ce"
+      "bytes": 4258,
+      "sha256": "a964cdcdc465d61127b80a7685930c64e811e6304a4790b887a6b8264dbc9602"
     },
     {
       "path": "docs/api-reference.md",
@@ -85,18 +85,18 @@
     },
     {
       "path": "docs/api.md",
-      "bytes": 6305,
-      "sha256": "f04e5c935ec8b514025ef89e003ab14713a1afa67cbcaa5f604d34c89681e3fe"
+      "bytes": 6360,
+      "sha256": "2500f99384d32117d51db3724c3cb7a13942396e0943d133251026b062c3e4f6"
     },
     {
       "path": "docs/architecture.md",
-      "bytes": 4675,
-      "sha256": "0b31b2657e0a748dc6ff00f13042269e11e7ad7c98f0f853490a83822ce9b3ea"
+      "bytes": 4659,
+      "sha256": "5f3600e5657a74c507b5405bc0b4c9d356600527929eaecfdefd84472fccaab0"
     },
     {
       "path": "docs/building.md",
-      "bytes": 4337,
-      "sha256": "748edab4c2377d83b1ee83a65a1d9eefca8cbd457d4907e7490f66716150cd78"
+      "bytes": 3613,
+      "sha256": "978d2aa04433894f6197e3fce21cf1b128df6f5655fabbd05b89768e708b89aa"
     },
     {
       "path": "docs/dependency-inventory.json",
@@ -105,33 +105,33 @@
     },
     {
       "path": "docs/extensions.md",
-      "bytes": 2603,
-      "sha256": "8b5e0ec49a6c4662bcf6705d7fb9da2fd8dec07d1e6fd043cd2d5ce94ece3d11"
+      "bytes": 2515,
+      "sha256": "1179f7fbc8a057c4dcfc0e109148e715a7143e39e6de397b1c300a457a4a8c6f"
+    },
+    {
+      "path": "docs/format-references.md",
+      "bytes": 2017,
+      "sha256": "4f62cdf415e752df7aade021109c47602d493cce583dc8fbbb751d94af603ac4"
     },
     {
       "path": "docs/formats.md",
-      "bytes": 4689,
-      "sha256": "52aa51fa3ac4ec20131a48d4e8ddb6b4d8d6102a48dfd8cbc8a615f3c9e8af48"
+      "bytes": 4663,
+      "sha256": "6ac84136709a791ada2e19d71ca265b9ce8c1dbc23061919ceddf855ea345ec4"
     },
     {
       "path": "docs/images/studio.png",
-      "bytes": 54785,
-      "sha256": "87b71391e392ddac26691b3c6cbe455e44dfe381894469633c0a042dc204dc0b"
-    },
-    {
-      "path": "docs/provenance.md",
-      "bytes": 4739,
-      "sha256": "e482a5d29c0fffc799f5641186fc1cfb3a8edfa622d06a4965dfa8308d0a6ba4"
+      "bytes": 54580,
+      "sha256": "a5a102ddaaf75a4d3251f2c6217fb26c16c26e2936dfd9fe08a8e5346db9e603"
     },
     {
       "path": "docs/user-guide.md",
-      "bytes": 5477,
-      "sha256": "c2659f171b8e7176eea1dfccfe29e1fb441cb103f6dc87b93faf49520f904bab"
+      "bytes": 5382,
+      "sha256": "9cd4a3d32e7b0c6bec9b4e2a55b17611eb597b8d6b3c56e6047f9e6f5c5e717a"
     },
     {
       "path": "docs/validation.md",
-      "bytes": 4195,
-      "sha256": "c683b1e6440fd0c2ae0ce19623be6b75a0beb934306bbbd7550312fa1f7cfbe5"
+      "bytes": 2150,
+      "sha256": "1ec57825a55d7db325fd7d899c6b6f951735b2bc5455c8d26e6002925432cb82"
     },
     {
       "path": "examples/README.md",
@@ -155,13 +155,13 @@
     },
     {
       "path": "examples/extension/pyproject.toml",
-      "bytes": 420,
-      "sha256": "ab15bbcbe73db610307a57bb472a6cc031c78648c1aeced5da02173d3b4d201f"
+      "bytes": 418,
+      "sha256": "1c0a053f9189044fe8ef3d0b2f57ccd9bc89de49067fee1f052eac3e78e61a73"
     },
     {
       "path": "pyproject.toml",
       "bytes": 1154,
-      "sha256": "99ac0e30ed66ca02250bc373d0d6dbaccb98ca49f2b102d57414be828489c42c"
+      "sha256": "b6984789620b103a86d26936f5c8cbb0ba40467f9790b6caa0932acd8a0d5f9a"
     },
     {
       "path": "requirements-lock.txt",
@@ -171,7 +171,7 @@
     {
       "path": "src/tpac_studio/__init__.py",
       "bytes": 178,
-      "sha256": "1c977f08247bae342c59af39a0992edc1b8ea34c675e6953039d8e56587caa2e"
+      "sha256": "fa9600f412065597d95c5c9db2dbf833ab506fbbc4cca4c17078a33f0b772227"
     },
     {
       "path": "src/tpac_studio/blender_import.py",
@@ -185,8 +185,8 @@
     },
     {
       "path": "src/tpac_studio/core.py",
-      "bytes": 16499,
-      "sha256": "4540f9b9f210d715e31e8f56914142e2d0e72c5f2114b4d650b2f4a12bc6cf7a"
+      "bytes": 16506,
+      "sha256": "eba7ef6bb73b8443fc052ea83f815a010d41b2763e0ac6dded1cc839e310004b"
     },
     {
       "path": "src/tpac_studio/demo.py",
@@ -210,8 +210,8 @@
     },
     {
       "path": "src/tpac_studio/gui.py",
-      "bytes": 22365,
-      "sha256": "b237b44c3510c1d92f66121326af441f3570d3d2412a9bb20db11409b42ef3db"
+      "bytes": 22374,
+      "sha256": "fbbc643ff382921ee4aa2cc44e59ba2c738a4c71d07ed2292755d0da281d9fff"
     },
     {
       "path": "src/tpac_studio/mcp_server.py",
@@ -220,8 +220,8 @@
     },
     {
       "path": "src/tpac_studio/mesh_encoding.py",
-      "bytes": 5687,
-      "sha256": "217b874f3ea78620c387fc13219ca8e0c1c2d78e985a4915c237ea166eeac007"
+      "bytes": 5699,
+      "sha256": "e1d1edaa79caafde6546f9d51674b947bf7defbb6e4b3e58ce93378b51bc18a3"
     },
     {
       "path": "src/tpac_studio/mesh_preview.py",
@@ -265,8 +265,8 @@
     },
     {
       "path": "src/tpac_studio/textures.py",
-      "bytes": 4832,
-      "sha256": "67bc9934be3608f88a3f10c454d2e67df0f994dd34ed6c7da84553b647ad420f"
+      "bytes": 4839,
+      "sha256": "f7115b0587e1245ce513993b8e6184bf87426fad5277a00e5aace97758a2b042"
     },
     {
       "path": "src/tpac_studio/viewport.py",
@@ -305,8 +305,8 @@
     },
     {
       "path": "tools/build_executable.py",
-      "bytes": 1996,
-      "sha256": "34e17be0b9eef5953b1e22d99f31a37b4db6cdb1d7ac786ee2186db93653a511"
+      "bytes": 1971,
+      "sha256": "1449f0698cb5ee4a9f5b459b80a6f6c3d5a82024e849ae0cccb683fdc0d6e031"
     },
     {
       "path": "tools/check_gui.py",

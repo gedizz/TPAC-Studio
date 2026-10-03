@@ -1,6 +1,6 @@
 # Python and JSON API
 
-All frontends call `tpac_studio.service.Studio`. Importing it does not import Qt or OpenGL. The public automation surface is the service; binary codec helpers are lower-level and may change during 0.x development.
+All frontends call `tpac_studio.service.Studio`. Importing it does not import Qt or OpenGL. The public automation surface is the service; the versioned service contract is the supported integration boundary. Lower-level binary codec helpers are implementation details.
 
 ## Direct Python calls
 

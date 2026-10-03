@@ -1,11 +1,11 @@
 # Contributing
 
-Use a feature branch for changes. Follow [docs/building.md](docs/building.md) for setup, then run formatting checks, tests and schema generation. Add tests for behavioral changes, especially malformed input, source protection, conflict handling, stale plans and failures before output commit. Use original synthetic fixtures; do not commit extracted game content.
+Use a feature branch for changes. Follow [building](docs/building.md) for setup, then run lint, formatting, tests and schema checks. Add tests for behavioral changes, especially malformed input, source protection, conflict handling, stale plans and failures before output commit. Use original synthetic fixtures.
 
-Keep transport code thin: changes to behavior belong in the shared service/workspace/codecs so GUI, CLI and MCP agree. Public operations need type annotations, docstrings, discoverable JSON schemas and working examples. Do not describe opaque copying as format decoding or structural checks as game testing.
+Keep transport adapters thin: shared behavior belongs in the service, workspace and codecs so GUI, CLI and MCP agree. Public operations need type annotations, docstrings, discoverable JSON schemas and working examples. Distinguish opaque copying from decoding, and structural verification from engine testing.
 
-Document the source and license of new layout knowledge, code and assets. Retain third-party notices. Contributors must have the right to submit their contributions under the project's applicable licenses. No separate contributor agreement is currently used.
+Document sources and licenses for contributed code, format references and assets. Retain third-party notices. Contributions must be compatible with the applicable project licenses.
 
-Submit a pull request when the repository owner makes that workflow available. Include the problem, final behavior, tests and limitations. Do not commit directly to the default branch. Do not push, create PRs or merge on the owner's behalf without authorization.
+Submit a pull request describing the problem, resulting behavior, validation and limitations. Maintainers review and merge changes through pull requests. Do not push directly to the default branch.
 
-For substantial format support, first discuss the supported versions, preservation rules, maximum sizes, failure behavior and provenance. Animation codec and character-preview work needs the unresolved review in [docs/provenance.md](docs/provenance.md) addressed first.
+For substantial format additions, describe supported versions, preservation rules, size limits and failure behavior before implementation. [Format references](docs/format-references.md) explains the current layouts and attribution requirements.

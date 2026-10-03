@@ -1,7 +1,7 @@
 """Static mesh serialization helpers. Layout references: MIT TpacTool Model/
-Metamesh.cs, Mesh.cs, VertexStreamData.cs. See docs/provenance.md.
-Packed tangent conventions were empirically tested in the private prototype;
-this module contains no engine code or game assets.
+Metamesh.cs, Mesh.cs, VertexStreamData.cs. See docs/format-references.md.
+Packed tangent conventions are empirical format mappings. Validate new variants
+with explicit stream-layout and tangent-basis checks.
 """
 
 import math

@@ -2,7 +2,7 @@
 
 ## Development environment
 
-Tested on Windows using Python 3.12.14. From the repository root:
+From the repository root on Windows:
 
 ```powershell
 py -3.12 -m venv .venv
@@ -14,22 +14,20 @@ py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe tools/generate_reference.py --check
 ```
 
-`requirements-lock.txt` records the exact tested environment. To constrain the declared dependencies to those versions, add `-c requirements-lock.txt` to pip install. It is a Windows snapshot, not a hash-locked or cross-platform reproducibility guarantee. Core, GUI, MCP and developer dependencies are separated through package extras. The tests currently require the development, GUI and MCP extras (mesh decoding tests use NumPy); no game files are used.
+`requirements-lock.txt` records tested dependency versions. Add `-c requirements-lock.txt` to pip install to constrain dependencies to that snapshot. Core, GUI, MCP and developer dependencies are separated through extras. Tests use the GUI and MCP dependencies but no game files.
 
-Generate schemas after changing public signatures: `python tools/generate_reference.py`. Run the original workflow with `python examples/build_demo.py --output local/demo`.
+After changing public signatures, run `python tools/generate_reference.py` to update the API documentation and JSON schemas. Run `python examples/build_demo.py --output local/demo` to build an original example package and workspace.
 
-The CI workflow repeats source checks and packaging on Windows/Python 3.12. Desktop rendering is a separate manual check: `python tools/check_gui.py --output local/gui-check`. It opens only this application and records example screenshots, GL validity and decoder errors. It does not launch or automate the game. See [validation.md](validation.md) for what was actually run.
-
-## Python distributions
+## Python package
 
 ```powershell
 python -m build
-python -m pip install --force-reinstall --no-deps .\dist\tpac_studio-0.2.0-py3-none-any.whl
+python -m pip install --force-reinstall --no-deps .\dist\tpac_studio-1.0.0-py3-none-any.whl
 ```
 
-Review wheel/sdist contents before publishing: include licenses, source and intended docs; exclude environments, user assets, logs, game files and research dumps. Neither command uploads to PyPI or GitHub.
+The wheel includes the core package and entry points. Install the appropriate optional dependencies for GUI or MCP use. Review archive contents before distribution; exclude environments, user assets, logs and generated build directories.
 
-## Local Windows executable
+## Windows application
 
 ```powershell
 python -m pip install ".[gui,bundle]"
@@ -37,16 +35,23 @@ python tools/build_executable.py
 .\dist\TPACStudio\TPACStudio.exe
 ```
 
-PyInstaller creates a **directory**, not a standalone single file. Keep the whole directory together. The helper does not sign the executable or create an installer. The source release's executable helper is supplied for local development; consult the validation report for whether it was run for this candidate. The Python package entry points remain the supported CLI/MCP distribution.
+The build creates a directory containing `TPACStudio.exe` and `_internal`. Distribute the whole directory as a ZIP; the executable depends on those runtime files. The build helper constrains only its child PATH to avoid collecting incompatible DLLs from unrelated native tools. The application is not code-signed by this script.
 
-For a short packaged-app check, run `TPACStudio.exe --check-startup --output <new-test-folder>`. It opens its own example window briefly, saves original-example screenshots/results, then exits. The check never launches the game. The build helper constrains only its child PATH to avoid collecting unrelated host DLLs with colliding names.
+Run `TPACStudio.exe --check-startup --output <new-test-folder>` for a packaged-app check. It opens original examples, saves screenshots/results and exits. It never launches the game. Run the check on an extracted release ZIP as well as the build directory.
 
-Qt/PySide is dynamically linked in a normal bundle and carries LGPL/GPL terms distinct from this project's MIT license. Before redistributing binaries, preserve dependency notices, include required license texts, provide required source/relinking/replacement information as applicable, and review the precise components packaged by PyInstaller. The helper alone does not satisfy or certify all binary-distribution obligations. Keep source available and do not label all bundled libraries MIT.
+Blender is optional and external. The frozen application's importer temporarily clears PyInstaller's Windows DLL-search override while spawning Blender so the child can load its own libraries.
 
-Blender is external, optional and never bundled. If importing through Blender from a frozen GUI, ensure the installed Blender can load its own native libraries; the importer temporarily removes PyInstaller's Windows DLL search override around child creation. A known-good source-based launch is useful for diagnosing native dependency issues.
+## Dependency notices
 
-## Preparing the GitHub folder
+Include the application license, `NOTICE` and relevant third-party license texts in binary archives. Qt/PySide libraries use LGPL/GPL licensing options distinct from the application's MIT license. Keep dynamically loaded libraries replaceable, provide matching source/build references and retain their notices. See [Qt licensing](https://doc.qt.io/qt-6/licensing.html) and [third-party notices](../THIRD_PARTY_NOTICES.md) for component references.
 
-This delivered folder is the repository root. It includes no Git history or remote, so the owner can upload/import it into a new private repository. `.gitignore` covers generated binaries, packages, workspaces, caches and secrets; it does not remove already tracked files and does not prevent accidental manual web uploads. Review the actual file list.
+## Release checklist
 
-Before a public release: resolve [provenance gates](provenance.md), confirm animation scope, set a security contact/private reporting channel, select supported platforms and publish test coverage honestly. Enable branch protection. Never push directly to main/master or create/merge a PR on the owner's behalf without explicit delegation.
+1. Select a clean committed revision and set the package/app version consistently.
+2. Run automated checks and build the wheel and Windows application from that revision.
+3. Include documentation, licenses, source/build information and original examples.
+4. Extract the Windows ZIP into a fresh directory and run the packaged-app check.
+5. Generate SHA-256 checksums for the final artifacts.
+6. Create the version tag at the tested commit and attach the archives, wheel and checksums to the GitHub release.
+
+Keep release binaries as release attachments rather than committing them to Git. `.gitignore` excludes generated packages, workspaces, binaries and caches; inspect staged files before committing. Release notes should state supported features, installation steps and known limitations.

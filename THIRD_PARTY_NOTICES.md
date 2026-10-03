@@ -1,6 +1,6 @@
 # Third-party notices
 
-TPAC Studio's MIT license covers eligible original work. The licenses below remain with their respective authors. This source folder does not bundle the listed runtimes. Exact installed versions, metadata and license-file hashes from the tested environment are recorded in [docs/dependency-inventory.json](docs/dependency-inventory.json); unresolved metadata is explicitly marked rather than guessed.
+TPAC Studio's MIT license covers eligible original work. The licenses below remain with their respective authors. This source folder does not bundle the listed runtimes. Exact installed versions, metadata and license-file hashes from the tested environment are recorded in [docs/dependency-inventory.json](docs/dependency-inventory.json); missing license metadata is recorded as null.
 
 | Component | Use / license reference |
 | --- | --- |
@@ -17,8 +17,8 @@ TPAC Studio's MIT license covers eligible original work. The licenses below rema
 | [PyInstaller](https://pyinstaller.org/en/stable/license.html) | Optional build tool; GPL with distribution exception; inspect its full terms before shipping binaries |
 | pytest, Ruff, build, setuptools | Development/build tools; retain upstream licenses when redistributing their components |
 
-Transitive dependencies are included in the inventory because the MCP SDK and GUI have dependencies of their own. Some package metadata omits a concise SPDX expression; the inventory lists shipped license files and metadata URLs where available. A metadata inventory is not a full binary component audit.
+Transitive dependencies are included in the inventory because the MCP SDK and GUI have dependencies of their own. Some package metadata omits a concise SPDX expression; the inventory lists shipped license files and metadata URLs where available. Consult each component's included license files when distributing a binary build.
 
-For a source upload, keep the retained TpacTool license and all project notices. For an executable release, review the exact collected libraries, retain their license texts and meet applicable source/replacement obligations. In particular, do not call a Qt/PySide application bundle wholly MIT. `tools/build_executable.py` creates a local development artifact; it does not certify distribution compliance.
+Retain the TpacTool license and project notices in source distributions. Binary archives must also include the relevant runtime license texts and source/build references. Keep the Qt/PySide libraries replaceable and distinguish their licenses from the application's MIT license.
 
 TaleWorlds game content and user-provided assets are not licensed by this project. No asset license is inferred from successful decoding or repackaging.

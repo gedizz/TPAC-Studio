@@ -55,4 +55,4 @@ Choose a new filename in a staging directory. Do not delete old packages until y
 - `PROTECTED_SOURCE`: pick a different output. Explicit overwrite does not disable source protection.
 - Unsupported preview: keep the record opaque or install a trusted extension; no decoder means no preview.
 
-This source release starts a new workspace format. Earlier private prototype versions (including 1.1) are not the same release line; their workspace files are not migrated automatically. Open their TPAC outputs or original assets in a new workspace. The private prototype has not been overwritten by this project.
+TPAC Studio 1.0.0 reads version-1 `.tpstudio` workspaces. Other workspace layouts are rejected with `UNSUPPORTED`. To import data from another tool, open its TPAC packages or supported source assets in a new workspace.

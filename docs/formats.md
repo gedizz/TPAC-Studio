@@ -44,8 +44,8 @@ Preview samples basic emission/lifetime/velocity/tint/alpha and available sprite
 
 ## Animations
 
-Animation records can be inspected as container records and copied unchanged. Skeletal decoding, FBX animation import, playback, character preview and animation writing are excluded from this source candidate. The old implementation's provenance and game-derived preview character are unresolved. No replacement encoder is claimed. See [provenance](provenance.md).
+Animation records can be inspected as container records and copied unchanged. Skeletal decoding, FBX animation import, playback, character preview and animation writing are not supported in 1.0.0. To preserve an animation, include its existing record and available dependencies in a build plan.
 
 ## Workspace format
 
-A version-1 `.tpstudio` is a ZIP containing `workspace.json` and, when nonempty, `contents.tpac`. It is self-contained. Readers reject unexpected entries and limit metadata to 16 MiB and the embedded package to 8 GiB. Origins/protected source paths remain local metadata; do not publish real workspaces without reviewing those paths and asset rights. Session undo and live GUI state are not serialized. Workspaces from the old private prototype are not automatically migrated.
+A version-1 `.tpstudio` is a ZIP containing `workspace.json` and, when nonempty, `contents.tpac`. It is self-contained. Readers reject unexpected entries and limit metadata to 16 MiB and the embedded package to 8 GiB. Origins/protected source paths remain local metadata; do not publish real workspaces without reviewing those paths and asset rights. Session undo and live GUI state are not serialized. Only workspace format version 1 is supported; other layouts require exporting TPACs or supported source assets first.

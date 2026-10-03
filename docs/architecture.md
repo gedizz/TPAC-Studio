@@ -41,7 +41,7 @@ TPAC-Studio/
   examples/                 Original, runnable automation/provider examples
   tests/                    Synthetic fixtures, failure cases, CLI and MCP tests
   tools/                    Schema generation, GUI checks and executable build helper
-  docs/                     Usage, API, provenance, format and release documentation
+  docs/                     Usage, API, format references and release documentation
 ```
 
 ## Dependency direction
@@ -63,5 +63,5 @@ Providers return metadata or a replacement asset through a declared settings sch
 - No game DLL or engine renderer is loaded; preview results are approximations.
 - Headless operations never show modal dialogs.
 - Filesystem roots and revision guards prevent common automation mistakes; they are not a hostile-code sandbox.
-- Source distribution contains no game assets, imported models, private captures or compiled engine code.
+- Example assets are generated procedurally; no game installation is required to use them.
 - No audio playback, mixer manipulation or game-option editing exists in this project.

@@ -1,7 +1,7 @@
 """Create a local one-directory GUI executable using an installed PyInstaller.
 
-This is a development bundle, not a distribution-license certification. Consult
-docs/building.md before sharing it. The source folder never embeds game assets.
+Run with the GUI and bundle dependencies installed. See docs/building.md for
+packaging, license notices and verification instructions.
 """
 
 import subprocess

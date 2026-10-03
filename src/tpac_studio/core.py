@@ -1,7 +1,7 @@
 """Bounded TPAC v1/v2 container I/O; payloads remain opaque unless explicitly decoded.
 
 Layout reference: MIT-licensed TpacTool, Package/AssetPackage.cs at the revision
-recorded in docs/provenance.md. See LICENSES/TpacTool-MIT.txt for attribution.
+recorded in docs/format-references.md. See LICENSES/TpacTool-MIT.txt for attribution.
 No TaleWorlds library is imported. Reads and writes do not execute asset content.
 """
 
