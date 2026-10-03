@@ -1,0 +1,13 @@
+TPAC Studio
+Copyright (c) 2026 X7 Dragon
+
+TPAC container and supported asset-layout work references/adapts TpacTool:
+Copyright (c) 2020-2022, szszss
+https://github.com/szszss/TpacTool
+Audited revision b56b77ad273ba67192b1594dbb2eeca8c542b3b7
+MIT license retained in LICENSES/TpacTool-MIT.txt.
+
+TaleWorlds and Mount & Blade are the respective owners' marks.
+This independent community project is not endorsed by TaleWorlds.
+The project's license does not grant rights to game software or user assets.
+See docs/provenance.md for included/excluded work and unresolved release questions.

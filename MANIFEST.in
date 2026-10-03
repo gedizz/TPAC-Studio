@@ -1,0 +1,12 @@
+include README.md LICENSE NOTICE THIRD_PARTY_NOTICES.md CONTRIBUTING.md SECURITY.md AGENTS.md CHANGELOG.md
+include requirements-lock.txt .gitignore .gitattributes
+recursive-include LICENSES *.txt *.md
+recursive-include docs *.md *.json *.png
+recursive-include examples *.py *.toml *.md LICENSE
+recursive-include tests *.py
+include tools/check_gui.py tools/generate_reference.py tools/build_executable.py tools/gui_entry.py
+recursive-include src/tpac_studio *.py *.json py.typed
+prune local
+prune upstream
+prune .venv
+global-exclude __pycache__ *.py[cod] *.tpac *.tpstudio *.dll *.exe

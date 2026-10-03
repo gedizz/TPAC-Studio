@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tpac-studio-example-opacity"
+version = "0.1.0"
+requires-python = ">=3.12"
+license = "MIT"
+authors = [{name = "X7 Dragon"}]
+dependencies = ["tpac-studio>=0.2,<0.3"]
+
+[project.entry-points."tpac_studio.extensions"]
+example-opacity = "example_opacity:ExampleOpacity"
+
+[tool.setuptools]
+py-modules = ["example_opacity"]

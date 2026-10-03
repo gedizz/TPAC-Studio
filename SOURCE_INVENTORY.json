@@ -1,0 +1,327 @@
+{
+  "version": "0.2.0",
+  "date": "2026-10-03",
+  "scope": "Canonical Git source files with LF text; inventory excludes itself and generated local verification files",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 155,
+      "sha256": "3b058744f0bed7c4e0f385f3ce89ab562e2d83f70d079b635e10396d035d1e3f"
+    },
+    {
+      "path": ".github/workflows/check.yml",
+      "bytes": 575,
+      "sha256": "198a53858acd4f202595bd3a84bf49cca652f0ce880203696cfd6c60cace674c"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 625,
+      "sha256": "b41ba0185865444a718d182c492db8a9ac429e2b6c8f725a58ac08af436a9407"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 1970,
+      "sha256": "4a294333c72eac87070fe6e304d8fe024703271cf16e795d3e0437a576780836"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 860,
+      "sha256": "0fc30af6b1ccb52d122240424e16a3cd3c027b13389dfbbcad43e6cf5374f275"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "bytes": 1484,
+      "sha256": "58e52d511ff667b548b33eb75221b5e31ca2bd521cc6d3fc13b9df2a7bf1859f"
+    },
+    {
+      "path": "LICENSE",
+      "bytes": 1066,
+      "sha256": "0e7d0d94a082ea7d71c6dbd569b7a24bb6302e4c33ff2b0a2d9029e9f47cd042"
+    },
+    {
+      "path": "LICENSES/README.md",
+      "bytes": 496,
+      "sha256": "7921f69ec936e5ea237adbe6a3c11af359ec8352bfdeb9e937a623087033770d"
+    },
+    {
+      "path": "LICENSES/TpacTool-MIT.txt",
+      "bytes": 1069,
+      "sha256": "4142632d12cd15a5aed42ca9f9ca5defc73ad679b65e7ee744213a94bdc7edb1"
+    },
+    {
+      "path": "MANIFEST.in",
+      "bytes": 584,
+      "sha256": "13ef2beb6d0aea942a80217339e22864b40465dd7ec2709b361dfad113cf5267"
+    },
+    {
+      "path": "NOTICE",
+      "bytes": 584,
+      "sha256": "6e81968fead903ae213e3d795e68b6501f2367f8896e28241886f200c787c0b8"
+    },
+    {
+      "path": "README.md",
+      "bytes": 6008,
+      "sha256": "851f5816c440c24f6f5d01d8807aedfe1886593f890b39ca02ce64e76c4304c7"
+    },
+    {
+      "path": "SECURITY.md",
+      "bytes": 1535,
+      "sha256": "d8489f5c546a1ccb323bc5c63a11660f894a33d7b80e2cb36ec101c6f1e010e3"
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "bytes": 2978,
+      "sha256": "ba46bd5bdb8f1fa885919f40b3137f6a73692fbf4425b7d9ca3928b61dfa9b62"
+    },
+    {
+      "path": "docs/ai.md",
+      "bytes": 4233,
+      "sha256": "713ab79b5a3342a70b6668340ab97fe2d0393633ff0a43032b2c067ee9b0a3ce"
+    },
+    {
+      "path": "docs/api-reference.md",
+      "bytes": 14734,
+      "sha256": "a4a503594d6553575c1b9055ddc54ba35b2d6db7261b8bba00a547c0c2999727"
+    },
+    {
+      "path": "docs/api.md",
+      "bytes": 6305,
+      "sha256": "f04e5c935ec8b514025ef89e003ab14713a1afa67cbcaa5f604d34c89681e3fe"
+    },
+    {
+      "path": "docs/architecture.md",
+      "bytes": 4675,
+      "sha256": "0b31b2657e0a748dc6ff00f13042269e11e7ad7c98f0f853490a83822ce9b3ea"
+    },
+    {
+      "path": "docs/building.md",
+      "bytes": 4337,
+      "sha256": "748edab4c2377d83b1ee83a65a1d9eefca8cbd457d4907e7490f66716150cd78"
+    },
+    {
+      "path": "docs/dependency-inventory.json",
+      "bytes": 44244,
+      "sha256": "97e03e16f6cbdad0625e5fda03ae98547fdc08e671529a263f97498d020915cf"
+    },
+    {
+      "path": "docs/extensions.md",
+      "bytes": 2603,
+      "sha256": "8b5e0ec49a6c4662bcf6705d7fb9da2fd8dec07d1e6fd043cd2d5ce94ece3d11"
+    },
+    {
+      "path": "docs/formats.md",
+      "bytes": 4689,
+      "sha256": "52aa51fa3ac4ec20131a48d4e8ddb6b4d8d6102a48dfd8cbc8a615f3c9e8af48"
+    },
+    {
+      "path": "docs/images/studio.png",
+      "bytes": 54785,
+      "sha256": "87b71391e392ddac26691b3c6cbe455e44dfe381894469633c0a042dc204dc0b"
+    },
+    {
+      "path": "docs/provenance.md",
+      "bytes": 4739,
+      "sha256": "e482a5d29c0fffc799f5641186fc1cfb3a8edfa622d06a4965dfa8308d0a6ba4"
+    },
+    {
+      "path": "docs/user-guide.md",
+      "bytes": 5477,
+      "sha256": "c2659f171b8e7176eea1dfccfe29e1fb441cb103f6dc87b93faf49520f904bab"
+    },
+    {
+      "path": "docs/validation.md",
+      "bytes": 4195,
+      "sha256": "c683b1e6440fd0c2ae0ce19623be6b75a0beb934306bbbd7550312fa1f7cfbe5"
+    },
+    {
+      "path": "examples/README.md",
+      "bytes": 605,
+      "sha256": "b7e791aaeec3574f87dc7232e9ceee99385cc5951f4422c417973bdf3d029c1b"
+    },
+    {
+      "path": "examples/build_demo.py",
+      "bytes": 918,
+      "sha256": "748fffcada0ab2edd5290633174270c79d76b00f065271979ccac484ce17fd1a"
+    },
+    {
+      "path": "examples/extension/LICENSE",
+      "bytes": 1066,
+      "sha256": "0e7d0d94a082ea7d71c6dbd569b7a24bb6302e4c33ff2b0a2d9029e9f47cd042"
+    },
+    {
+      "path": "examples/extension/example_opacity.py",
+      "bytes": 931,
+      "sha256": "8a0d97878f7e221053c69b19803b77ac183d4a769654693d9467c02dee3c36c4"
+    },
+    {
+      "path": "examples/extension/pyproject.toml",
+      "bytes": 420,
+      "sha256": "ab15bbcbe73db610307a57bb472a6cc031c78648c1aeced5da02173d3b4d201f"
+    },
+    {
+      "path": "pyproject.toml",
+      "bytes": 1154,
+      "sha256": "99ac0e30ed66ca02250bc373d0d6dbaccb98ca49f2b102d57414be828489c42c"
+    },
+    {
+      "path": "requirements-lock.txt",
+      "bytes": 1002,
+      "sha256": "54bdd171c41bc13caaba892eed8bc4fc59086d4f3d34723fa98e8c73829e7c1f"
+    },
+    {
+      "path": "src/tpac_studio/__init__.py",
+      "bytes": 178,
+      "sha256": "1c977f08247bae342c59af39a0992edc1b8ea34c675e6953039d8e56587caa2e"
+    },
+    {
+      "path": "src/tpac_studio/blender_import.py",
+      "bytes": 2919,
+      "sha256": "d2944a6b5f0e391263bc199765bf1776be75a34bc8f873221e060b50d33d1b31"
+    },
+    {
+      "path": "src/tpac_studio/cli.py",
+      "bytes": 2962,
+      "sha256": "eaf809c34aab137d145c4fbe12dc4d534201ccfc39b738ace5971f9d3bbfb92a"
+    },
+    {
+      "path": "src/tpac_studio/core.py",
+      "bytes": 16499,
+      "sha256": "4540f9b9f210d715e31e8f56914142e2d0e72c5f2114b4d650b2f4a12bc6cf7a"
+    },
+    {
+      "path": "src/tpac_studio/demo.py",
+      "bytes": 2944,
+      "sha256": "3bf87d0418ac7ee8eabd06cd3007a1d05e1275675c7a9f335c339a8e01f1f58d"
+    },
+    {
+      "path": "src/tpac_studio/desktop_check.py",
+      "bytes": 2650,
+      "sha256": "486b2d8ba243fbea06929bc422d348c3bededc97524163225af3761dcf9a7bb1"
+    },
+    {
+      "path": "src/tpac_studio/errors.py",
+      "bytes": 842,
+      "sha256": "344f79dfa4fbc2387233d3fd7c466a53723f13d7534bdf0d1461332794b4b36f"
+    },
+    {
+      "path": "src/tpac_studio/extensions.py",
+      "bytes": 2313,
+      "sha256": "e5652acf67ce7e6079c8c5b8ed94f05d75742a00951788ad3951e27b95993f53"
+    },
+    {
+      "path": "src/tpac_studio/gui.py",
+      "bytes": 22365,
+      "sha256": "b237b44c3510c1d92f66121326af441f3570d3d2412a9bb20db11409b42ef3db"
+    },
+    {
+      "path": "src/tpac_studio/mcp_server.py",
+      "bytes": 4220,
+      "sha256": "3989cbbe8364af4a733f6a116083cd8af5107d1a4ca0f428e0f3055b43611710"
+    },
+    {
+      "path": "src/tpac_studio/mesh_encoding.py",
+      "bytes": 5687,
+      "sha256": "217b874f3ea78620c387fc13219ca8e0c1c2d78e985a4915c237ea166eeac007"
+    },
+    {
+      "path": "src/tpac_studio/mesh_preview.py",
+      "bytes": 3217,
+      "sha256": "adb8aa1165f97c92489f4d629f51f00b0f919f762eea43cd98e33e4a8d21b4fa"
+    },
+    {
+      "path": "src/tpac_studio/mesh_validation.py",
+      "bytes": 1840,
+      "sha256": "6e126fc05cc14406bcc8ab5bf0c60e646eb0ffa7af89ef89dd7993b042f8734b"
+    },
+    {
+      "path": "src/tpac_studio/models.py",
+      "bytes": 8844,
+      "sha256": "0f653a218abe590ffe991678a607268bde57140c8df980e91db2dfaca77c61ed"
+    },
+    {
+      "path": "src/tpac_studio/particles.py",
+      "bytes": 6537,
+      "sha256": "00b3dda089d21d905285c74f8037ac863179c7aebead5e9cff2b2f970d03fc44"
+    },
+    {
+      "path": "src/tpac_studio/py.typed",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/tpac_studio/schemas/operations.json",
+      "bytes": 16318,
+      "sha256": "71eba377cb88c7aa0265e83a3d06c5d9a3435c1f6b0a02340ad1a0602b8cb4d1"
+    },
+    {
+      "path": "src/tpac_studio/service.py",
+      "bytes": 20261,
+      "sha256": "9458b7e8befc79e7bdd2770fb34642827be35bec9372cee7d0816686bbef6f62"
+    },
+    {
+      "path": "src/tpac_studio/settings.py",
+      "bytes": 2396,
+      "sha256": "d0377372803240faf34bc2a5ffd65e3e5d5ba78635e578cf3d0bf5157a315258"
+    },
+    {
+      "path": "src/tpac_studio/textures.py",
+      "bytes": 4832,
+      "sha256": "67bc9934be3608f88a3f10c454d2e67df0f994dd34ed6c7da84553b647ad420f"
+    },
+    {
+      "path": "src/tpac_studio/viewport.py",
+      "bytes": 14715,
+      "sha256": "24bf124a017341ab283911318fe2d2918e9f840299daf7c30755aba3df9abc0a"
+    },
+    {
+      "path": "src/tpac_studio/workspace.py",
+      "bytes": 22636,
+      "sha256": "7783e731577911cdc99813847da1e1166a257910a9f0ab4f4dd4b9aa4362caae"
+    },
+    {
+      "path": "tests/test_api.py",
+      "bytes": 4581,
+      "sha256": "14f9845d511f08ef9b0982d09ecb156b9e6dd3c59a30582e319d426f1037fce0"
+    },
+    {
+      "path": "tests/test_core.py",
+      "bytes": 7181,
+      "sha256": "e18f91e91896c05b3ba26e7068fc2fc6ee6f8ca1b67a8b586a4fd871b33b4a4d"
+    },
+    {
+      "path": "tests/test_extensions.py",
+      "bytes": 2371,
+      "sha256": "efac5e6746e3b24ed26d827cc663260d5a0fae649c59efec1e44e4aafa544d16"
+    },
+    {
+      "path": "tests/test_mcp.py",
+      "bytes": 2004,
+      "sha256": "70abd729aadb1d7327c34575c5b764fb9ef8ab3dc0798605e8abd53299f235b9"
+    },
+    {
+      "path": "tests/test_workspace_inputs.py",
+      "bytes": 1372,
+      "sha256": "be7f1d6eec381739bd5a1c7743d089eb59d8938e43a078f2f2f3b32830b344d7"
+    },
+    {
+      "path": "tools/build_executable.py",
+      "bytes": 1996,
+      "sha256": "34e17be0b9eef5953b1e22d99f31a37b4db6cdb1d7ac786ee2186db93653a511"
+    },
+    {
+      "path": "tools/check_gui.py",
+      "bytes": 164,
+      "sha256": "8d7c5d67d38b1a30f4ff1b54526b5530444322b8399fbac971de360ae580b5aa"
+    },
+    {
+      "path": "tools/generate_reference.py",
+      "bytes": 1817,
+      "sha256": "1da2293bbb2fb61de466a51b3c08a85aa56370128c1d97dbe3597507352d87eb"
+    },
+    {
+      "path": "tools/gui_entry.py",
+      "bytes": 670,
+      "sha256": "d87167e801227419970290371fa392abd2ed9c4dd079de9562e2a4aec7f26aa8"
+    }
+  ]
+}

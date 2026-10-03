@@ -1,0 +1,683 @@
+{
+  "api_version": "1",
+  "operations": {
+    "asset_export": {
+      "additionalProperties": false,
+      "description": "Export a single record as TPAC or a supported texture as PNG.",
+      "properties": {
+        "asset": {
+          "type": "string"
+        },
+        "format": {
+          "default": "tpac",
+          "type": "string"
+        },
+        "output": {
+          "type": "string"
+        },
+        "overwrite": {
+          "default": false,
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "asset",
+        "output"
+      ],
+      "type": "object"
+    },
+    "asset_inspect": {
+      "additionalProperties": false,
+      "description": "Inspect metadata and supported decoded fields; report decoder errors separately.",
+      "properties": {
+        "asset": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "asset"
+      ],
+      "type": "object"
+    },
+    "asset_list": {
+      "additionalProperties": false,
+      "description": "List/filter workspace assets with bounded pagination.",
+      "properties": {
+        "kind": {
+          "default": "",
+          "type": "string"
+        },
+        "limit": {
+          "default": 100,
+          "type": "integer"
+        },
+        "offset": {
+          "default": 0,
+          "type": "integer"
+        },
+        "query": {
+          "default": "",
+          "type": "string"
+        },
+        "source": {
+          "default": "",
+          "type": "string"
+        }
+      },
+      "required": [],
+      "type": "object"
+    },
+    "asset_remove": {
+      "additionalProperties": false,
+      "description": "Remove workspace records only. Original package files remain untouched.",
+      "properties": {
+        "assets": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 100000,
+          "type": "array"
+        },
+        "expected_revision": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "assets"
+      ],
+      "type": "object"
+    },
+    "asset_select": {
+      "additionalProperties": false,
+      "description": "Include/exclude exact assets in future plans.",
+      "properties": {
+        "assets": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 100000,
+          "type": "array"
+        },
+        "expected_revision": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "selected": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "assets",
+        "selected"
+      ],
+      "type": "object"
+    },
+    "build_execute": {
+      "additionalProperties": false,
+      "description": "Build the matching current plan, verifying stored output payloads.",
+      "properties": {
+        "allow_missing": {
+          "default": false,
+          "type": "boolean"
+        },
+        "include_dependencies": {
+          "default": true,
+          "type": "boolean"
+        },
+        "output": {
+          "type": "string"
+        },
+        "overwrite": {
+          "default": false,
+          "type": "boolean"
+        },
+        "plan_id": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "output",
+        "plan_id"
+      ],
+      "type": "object"
+    },
+    "build_plan": {
+      "additionalProperties": false,
+      "description": "Review the exact asset set and get the required build plan ID.",
+      "properties": {
+        "include_dependencies": {
+          "default": true,
+          "type": "boolean"
+        }
+      },
+      "required": [],
+      "type": "object"
+    },
+    "capabilities": {
+      "additionalProperties": false,
+      "description": "Discover actual supported operations and feature limitations.",
+      "properties": {},
+      "required": [],
+      "type": "object"
+    },
+    "dependencies": {
+      "additionalProperties": false,
+      "description": "Report known references and incomplete-analysis limitations.",
+      "properties": {},
+      "required": [],
+      "type": "object"
+    },
+    "examples_load": {
+      "additionalProperties": false,
+      "description": "Add original procedural examples; no game files or downloads are used.",
+      "properties": {
+        "expected_revision": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [],
+      "type": "object"
+    },
+    "extension_edit": {
+      "additionalProperties": false,
+      "description": "Validate a provider edit and commit it with normal identity/revision guards.",
+      "properties": {
+        "asset": {
+          "type": "string"
+        },
+        "expected_revision": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "provider": {
+          "type": "string"
+        },
+        "values": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "provider",
+        "asset",
+        "values"
+      ],
+      "type": "object"
+    },
+    "extension_inspect": {
+      "additionalProperties": false,
+      "description": "Inspect an asset through a provider explicitly loaded by the host.",
+      "properties": {
+        "asset": {
+          "type": "string"
+        },
+        "provider": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "provider",
+        "asset"
+      ],
+      "type": "object"
+    },
+    "extension_schema": {
+      "additionalProperties": false,
+      "description": "Discover edit settings from a provider explicitly enabled by the host.",
+      "properties": {
+        "provider": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "provider"
+      ],
+      "type": "object"
+    },
+    "extensions_list": {
+      "additionalProperties": false,
+      "description": "Inspect installed/loaded provider metadata without enabling new code.",
+      "properties": {},
+      "required": [],
+      "type": "object"
+    },
+    "model_import": {
+      "additionalProperties": false,
+      "description": "Import static geometry JSON, or use host-configured Blender for OBJ/FBX/glTF/BLEND.",
+      "properties": {
+        "conflict": {
+          "default": "error",
+          "enum": [
+            "error",
+            "keep",
+            "replace"
+          ],
+          "type": "string"
+        },
+        "expected_revision": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "name": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        },
+        "scale": {
+          "default": 1.0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "path",
+        "name"
+      ],
+      "type": "object"
+    },
+    "package_add": {
+      "additionalProperties": false,
+      "description": "Atomically add packages. A conflict never prompts in headless interfaces.",
+      "properties": {
+        "conflict": {
+          "default": "error",
+          "enum": [
+            "error",
+            "keep",
+            "replace"
+          ],
+          "type": "string"
+        },
+        "expected_revision": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "paths": {
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 100000,
+          "type": "array"
+        }
+      },
+      "required": [
+        "paths"
+      ],
+      "type": "object"
+    },
+    "package_inspect": {
+      "additionalProperties": false,
+      "description": "Inspect a package table without modifying the current workspace.",
+      "properties": {
+        "path": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "path"
+      ],
+      "type": "object"
+    },
+    "package_verify": {
+      "additionalProperties": false,
+      "description": "Check container bounds and hash every asset; this is not an engine test.",
+      "properties": {
+        "path": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "path"
+      ],
+      "type": "object"
+    },
+    "particle_edit": {
+      "additionalProperties": false,
+      "description": "Scale supported particle fields, optionally for a single emitter index.",
+      "properties": {
+        "asset": {
+          "type": "string"
+        },
+        "emitter": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "expected_revision": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "values": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "additionalProperties": false,
+          "properties": {
+            "emission": {
+              "default": 1,
+              "maximum": 5,
+              "minimum": 0.05,
+              "scope": "asset",
+              "type": "number",
+              "unit": "multiplier"
+            },
+            "lifetime": {
+              "default": 1,
+              "maximum": 5,
+              "minimum": 0.05,
+              "scope": "asset",
+              "type": "number",
+              "unit": "multiplier"
+            },
+            "opacity": {
+              "default": 1,
+              "maximum": 5,
+              "minimum": 0.05,
+              "scope": "asset",
+              "type": "number",
+              "unit": "multiplier"
+            },
+            "size": {
+              "default": 1,
+              "maximum": 5,
+              "minimum": 0.05,
+              "scope": "asset",
+              "type": "number",
+              "unit": "multiplier"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "required": [
+        "asset",
+        "values"
+      ],
+      "type": "object"
+    },
+    "schemas": {
+      "additionalProperties": false,
+      "description": "Discover supported settings; unknown keys are always rejected.",
+      "properties": {},
+      "required": [],
+      "type": "object"
+    },
+    "settings_get": {
+      "additionalProperties": false,
+      "description": "Return preview settings saved with the workspace.",
+      "properties": {},
+      "required": [],
+      "type": "object"
+    },
+    "settings_update": {
+      "additionalProperties": false,
+      "description": "Change schema-validated workspace preview settings.",
+      "properties": {
+        "expected_revision": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "values": {
+          "$schema": "https://json-schema.org/draft/2020-12/schema",
+          "additionalProperties": false,
+          "properties": {
+            "preview.emitter_speed": {
+              "default": 0,
+              "maximum": 80,
+              "minimum": 0,
+              "scope": "workspace_preview",
+              "type": "number",
+              "unit": "m/s"
+            },
+            "preview.fov": {
+              "default": 42,
+              "maximum": 100,
+              "minimum": 15,
+              "scope": "workspace_preview",
+              "type": "number",
+              "unit": "degrees"
+            },
+            "preview.loop": {
+              "default": true,
+              "scope": "workspace_preview",
+              "type": "boolean"
+            }
+          },
+          "type": "object"
+        }
+      },
+      "required": [
+        "values"
+      ],
+      "type": "object"
+    },
+    "texture_import": {
+      "additionalProperties": false,
+      "description": "Create RGBA texture mipmaps from a supplied image.",
+      "properties": {
+        "conflict": {
+          "default": "error",
+          "enum": [
+            "error",
+            "keep",
+            "replace"
+          ],
+          "type": "string"
+        },
+        "expected_revision": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        },
+        "name": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "path",
+        "name"
+      ],
+      "type": "object"
+    },
+    "workspace_info": {
+      "additionalProperties": false,
+      "description": "Read current workspace identity/revision and asset counts.",
+      "properties": {},
+      "required": [],
+      "type": "object"
+    },
+    "workspace_new": {
+      "additionalProperties": false,
+      "description": "Replace this service workspace. Caller must save wanted edits first.",
+      "properties": {},
+      "required": [],
+      "type": "object"
+    },
+    "workspace_open": {
+      "additionalProperties": false,
+      "description": "Replace the session with a self-contained saved workspace.",
+      "properties": {
+        "path": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "path"
+      ],
+      "type": "object"
+    },
+    "workspace_save": {
+      "additionalProperties": false,
+      "description": "Save the current workspace; detect changes made by another process.",
+      "properties": {
+        "overwrite": {
+          "default": false,
+          "type": "boolean"
+        },
+        "path": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "path"
+      ],
+      "type": "object"
+    },
+    "workspace_undo": {
+      "additionalProperties": false,
+      "description": "Undo one session edit; does not reverse an already-written output file.",
+      "properties": {
+        "expected_revision": {
+          "anyOf": [
+            {
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [],
+      "type": "object"
+    }
+  },
+  "particle": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "properties": {
+      "emission": {
+        "default": 1,
+        "maximum": 5,
+        "minimum": 0.05,
+        "scope": "asset",
+        "type": "number",
+        "unit": "multiplier"
+      },
+      "lifetime": {
+        "default": 1,
+        "maximum": 5,
+        "minimum": 0.05,
+        "scope": "asset",
+        "type": "number",
+        "unit": "multiplier"
+      },
+      "opacity": {
+        "default": 1,
+        "maximum": 5,
+        "minimum": 0.05,
+        "scope": "asset",
+        "type": "number",
+        "unit": "multiplier"
+      },
+      "size": {
+        "default": 1,
+        "maximum": 5,
+        "minimum": 0.05,
+        "scope": "asset",
+        "type": "number",
+        "unit": "multiplier"
+      }
+    },
+    "type": "object"
+  },
+  "workspace": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "properties": {
+      "preview.emitter_speed": {
+        "default": 0,
+        "maximum": 80,
+        "minimum": 0,
+        "scope": "workspace_preview",
+        "type": "number",
+        "unit": "m/s"
+      },
+      "preview.fov": {
+        "default": 42,
+        "maximum": 100,
+        "minimum": 15,
+        "scope": "workspace_preview",
+        "type": "number",
+        "unit": "degrees"
+      },
+      "preview.loop": {
+        "default": true,
+        "scope": "workspace_preview",
+        "type": "boolean"
+      }
+    },
+    "type": "object"
+  }
+}
